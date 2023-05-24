@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
+    "dev:web": "ngrok http --domain=builtbyandrew.com 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,8 +20,11 @@
     "typescript": "^4.7.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "10.4.7",
+    "file-loader": "^6.2.0",
     "postcss": "8.4.14",
+    "prettier": "^2.8.8",
     "tailwindcss": "^3.3.2"
   }
 }

@@ -15,7 +15,10 @@
   "[typescript]": {
     "editor.formatOnSave": true
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "cSpell.words": [
-    "snipcart"
+    "lato",
+    "snipcart",
+    "tailwindcss"
   ]
 }

@@ -1,19 +1,19 @@
-import Alert from './alert'
-import Footer from './footer'
-import Meta from './meta'
-import Head from 'next/head'
-import Navbar from './navbar';
+import Alert from "./alert";
+import Footer from "./footer";
+import Meta from "./meta";
+import Head from "next/head";
+import Navbar from "./navbar";
 
 export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
 
-      <div className="min-h-screen py-24">
+      <div className="min-h-screen pt-20">
         <Navbar />
-        <main className="py-8">{children}</main>
+        <main>{children}</main>
       </div>
       <Footer />
     </>
-  )
+  );
 }

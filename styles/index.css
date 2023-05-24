@@ -1,5 +1,7 @@
 @tailwind base;
 
+@import "snipcart.css";
+
 /* Write your own custom base styles here */
 
 /* Start purging... */
@@ -13,6 +15,10 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+html {
+  font-size: 16px;
+}
 
 a {
   @apply text-orange-400 hover:text-orange-700 inline;
@@ -105,4 +111,27 @@ a {
 
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
+}
+
+#snipcart {
+  @apply font-sans;
+}
+
+#snipcart .snipcart__font--secondary,
+#snipcart .snipcart__box--badge,
+#snipcart .snipcart__font--subtitle,
+#snipcart .snipcart__font--xlarge {
+  @apply font-sans font-bold;
+}
+
+.snipcart-cart-summary--edit.snipcart-modal__container  {
+  @apply shadow-3xl;
+}
+
+.snipcart-button-primary {
+  @apply bg-gray-300 text-gray-900 hover:bg-orange-500 hover:text-white;
+}
+
+strong {
+ @apply font-bold;
 }
