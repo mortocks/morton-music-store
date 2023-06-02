@@ -28,6 +28,7 @@ const Product = (props: IProductProps) => {
           className={`snipcart-add-item py-4 px-8 bg-orange-600 text-white text-xl`}
           data-item-id={props.product.id}
           data-item-name={props.product.name}
+          data-item-description={props.product.description}
           data-item-price={props.product.price}
           data-item-url={`https://builtbyandrew.com/catalogue/${props.product.slug}`}
           //data-item-image={props.product.image.src}

@@ -19,6 +19,7 @@ export default function Index({ post, preview }) {
         ...post,
         name: post.title,
         price: 3.0,
+        description: post.voicing.nodes[0]?.name || "",
       }
     : null;
   return (

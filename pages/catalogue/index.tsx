@@ -29,6 +29,7 @@ export default function Index({ allPosts: { nodes }, preview }) {
             <ul>
               {nodes.map((piece) => (
                 <PieceRow
+                  key={piece.slug}
                   slug={`/catalogue/${piece.slug}`}
                   title={piece.title}
                   sku={piece.sku}
