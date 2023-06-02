@@ -11,6 +11,7 @@ module.exports = {
     SNIPCART_PUBLIC_KEY: process.env.NEXT_PUBLIC_SNIPCART_PUBLIC_KEY,
   },
   images: {
+    unoptimized: true,
     domains: [
       process.env.WORDPRESS_API_URL.match(/(?!(w+)\.)\w*(?:\w+\.)+\w+/)[0], // Valid WP Image domain.
       "0.gravatar.com",
