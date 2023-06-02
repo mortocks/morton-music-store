@@ -29,11 +29,12 @@ const Product = (props: IProductProps) => {
           data-item-id={props.product.id}
           data-item-name={props.product.name}
           data-item-price={props.product.price}
-          data-item-url={`https://7009d4c57a42.ngrok.app/catalogue/${props.product.slug}`}
+          data-item-url={`https://builtbyandrew.com/catalogue/${props.product.slug}`}
           //data-item-image={props.product.image.src}
         >
           Add to cart
         </button>
+        <div>https://builtbyandrew.com/catalogue/{props.product.slug}</div>
       </div>
     </div>
   );

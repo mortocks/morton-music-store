@@ -1,12 +1,8 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllComposers, getAllPostsForHome } from "../lib/api";
-import { CMS_NAME } from "../lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Sand from "../assets/video/fire.mp4";
@@ -14,7 +10,7 @@ import Sand from "../assets/video/fire.mp4";
 import DefaultPoster from "../assets/img/default-piece.jpg";
 
 export default function Index({ allPosts: { nodes }, preview, composers }) {
-  const featured = nodes.splice(0, 5);
+  const featured = nodes.splice(0, 1);
 
   return (
     <Layout preview={preview}>
@@ -109,16 +105,18 @@ export default function Index({ allPosts: { nodes }, preview, composers }) {
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-16 mt-16">
             {featured.map((post) => (
-              <Link href={`/catalogue/${post.slug}`} key={post.id} className="">
-                <Image
-                  src={DefaultPoster}
-                  width={200}
-                  height={300}
-                  alt={`cover for ${post.title}`}
-                  className="mb-2 w-full hover:scale-105 transition-all"
-                />
-                {post.title}
-                <div className="text-gray-500 w-full">$3.40</div>
+              <Link href={`/catalogue/${post.slug}`} key={post.slug}>
+                <div>
+                  <Image
+                    src={DefaultPoster}
+                    width={200}
+                    height={300}
+                    alt={`cover for ${post.title}`}
+                    className="mb-2 w-full hover:scale-105 transition-all"
+                  />
+                  {post.title}
+                  <div className="text-gray-500 w-full">$3.40</div>
+                </div>
               </Link>
             ))}
           </div>

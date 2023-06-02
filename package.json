@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
-    "dev:web": "ngrok http --domain=builtbyandrew.com 3000",
+    "dev": "ngrok http 3000 --domain=builtbyandrew.com --log=stdout > /dev/null & next",
+    "dev:local": "next",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -20,6 +20,7 @@
     "typescript": "^4.7.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.34.3",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "10.4.7",
     "file-loader": "^6.2.0",

@@ -18,7 +18,7 @@ const merriweather = Merriweather({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className={`${lato.variable} ${merriweather.variable} font-sans`}>
-      <Script id="snippet" strategy="afterInteractive">
+      <Script id="snippet" strategy="beforeInteractive">
         {`
         // Initialize SnipCart
         window.SnipcartSettings = {
