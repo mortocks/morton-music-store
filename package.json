@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "ngrok http 3000 --domain=builtbyandrew.com --log=stdout > /dev/null & next",
     "dev:local": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
